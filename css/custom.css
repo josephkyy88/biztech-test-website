@@ -735,3 +735,21 @@ img  { max-width: 100%; height: auto; }
     gap: 8px !important;
   }
 }
+
+/* ─── Logo size — mobile only (767px and below) ─── */
+/* Reduces nav + footer Biztech logo ~14% (28px → 24px).
+   Uses !important to override the inline height on injected HTML.
+   Desktop and tablet (768px+) are entirely unchanged. */
+@media (max-width: 767px) {
+  /* Nav bar logo */
+  #main-nav a img {
+    height: 24px !important;
+    width: auto !important;
+  }
+
+  /* Footer logo */
+  footer img[alt="Biztech Group"] {
+    height: 24px !important;
+    width: auto !important;
+  }
+}
