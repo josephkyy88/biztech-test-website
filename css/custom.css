@@ -632,9 +632,23 @@ img  { max-width: 100%; height: auto; }
     padding: 20px !important;
   }
 
-  /* ── Tech partner logo grid: tighter tiles ── */
-  .tech-tile    { padding: 24px 16px; }
-  .tech-tile img { max-height: 36px; max-width: 120px; }
+  /* ── Tech partner logo grid: equal-height tiles, uniform logos ── */
+  .tech-grid { overflow: hidden; }
+  .tech-tile {
+    padding: 28px 20px;
+    min-height: 104px;          /* guarantees every cell the same row height */
+    align-items: center;
+    justify-content: center;
+  }
+  /* !important overrides per-image inline max-height/max-width attributes */
+  .tech-tile img {
+    max-height:  40px  !important;
+    max-width:   130px !important;
+    width:       auto  !important;
+    height:      auto  !important;
+    object-fit:  contain !important;
+    display:     block !important;
+  }
 
   /* ── Insight / knowledge card body ── */
   .insight-card-body { padding: 22px 20px 24px; }
