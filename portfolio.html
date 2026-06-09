@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Biztech Group Pte Ltd — Singapore Projects</title>
+  <meta name="description" content="Browse Biztech Group's completed projects across Singapore — CCTV, access control, network infrastructure, IT solutions, and smart building technology." />
+  <link rel="canonical" href="https://www.biztechgroup.sg/portfolio.html" />
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Biztech Group" />
+  <meta property="og:title" content="Portfolio | Biztech Group Pte Ltd — Singapore Projects" />
+  <meta property="og:description" content="Browse Biztech Group's completed projects across Singapore — CCTV, access control, network infrastructure, IT solutions, and smart building technology." />
+  <meta property="og:url" content="https://www.biztechgroup.sg/portfolio.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=630&q=80&auto=format&fit=crop" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio | Biztech Group Pte Ltd — Singapore Projects" />
+  <meta name="twitter:description" content="Browse Biztech Group's completed projects across Singapore — CCTV, access control, network infrastructure, IT solutions, and smart building technology." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=630&q=80&auto=format&fit=crop" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body>
+<div id="navbar"></div>
+
+<section class="page-hero" style="background-image:linear-gradient(rgba(7,17,32,.72),rgba(7,17,32,.72)),url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80&auto=format&fit=crop');background-size:cover;background-position:center;">
+  <div class="container" style="position:relative;z-index:1;">
+    <div style="display:flex;align-items:center;gap:8px;font-size:.8rem;color:rgba(255,255,255,.45);margin-bottom:16px;">
+      <a href="index.html" style="color:rgba(255,255,255,.45);text-decoration:none;" onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,.45)'">Home</a>
+      <span>/</span><span style="color:rgba(255,255,255,.7);">Portfolio</span>
+    </div>
+    <span class="section-label white">Our Work</span>
+    <h1 style="font-size:clamp(2rem,5vw,3.2rem);font-weight:900;color:#fff;letter-spacing:-.03em;line-height:1.15;margin-top:10px;max-width:700px;">3,500+ Projects Delivered Across APAC</h1>
+    <p style="font-size:1.05rem;color:rgba(255,255,255,.6);line-height:1.75;max-width:600px;margin-top:16px;">From small SME installations to large-scale government deployments — every project delivered on time, on budget, to the highest standard.</p>
+  </div>
+</section>
+
+<!-- Filter bar -->
+<section style="background:#fff;border-bottom:1px solid #e5e7eb;padding:20px 0;position:sticky;top:76px;z-index:50;">
+  <div class="container">
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+      <span style="font-size:.82rem;font-weight:600;color:#6b7280;margin-right:4px;">Filter by:</span>
+      <button onclick="filterProjects('all')" class="filter-btn active" style="padding:7px 16px;border-radius:100px;font-size:.83rem;font-weight:600;background:#0f1e3d;color:#fff;border:1px solid #0f1e3d;cursor:pointer;transition:all .2s;">All Projects</button>
+      <button onclick="filterProjects('cctv')" class="filter-btn" style="padding:7px 16px;border-radius:100px;font-size:.83rem;font-weight:600;background:#fff;color:#374151;border:1px solid #e5e7eb;cursor:pointer;transition:all .2s;">CCTV</button>
+      <button onclick="filterProjects('network')" class="filter-btn" style="padding:7px 16px;border-radius:100px;font-size:.83rem;font-weight:600;background:#fff;color:#374151;border:1px solid #e5e7eb;cursor:pointer;transition:all .2s;">Network</button>
+      <button onclick="filterProjects('smart')" class="filter-btn" style="padding:7px 16px;border-radius:100px;font-size:.83rem;font-weight:600;background:#fff;color:#374151;border:1px solid #e5e7eb;cursor:pointer;transition:all .2s;">Smart Building</button>
+      <button onclick="filterProjects('government')" class="filter-btn" style="padding:7px 16px;border-radius:100px;font-size:.83rem;font-weight:600;background:#fff;color:#374151;border:1px solid #e5e7eb;cursor:pointer;transition:all .2s;">Government</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#f8fafc;">
+  <div class="container">
+    <div id="projects-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:28px;">
+
+      <div class="project-card reveal" data-cat="cctv">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#071120,#0f1e3d);">
+          <span class="project-badge">CCTV + Access Control</span>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;"><span style="font-size:3.5rem;">🏢</span></div>
+        </div>
+        <div style="padding:24px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;"><span style="font-size:.75rem;background:#f3f4f6;color:#374151;padding:3px 10px;border-radius:100px;font-weight:500;">Commercial</span><span style="font-size:.75rem;color:#9ca3af;">· 2023</span></div>
+          <h3 style="font-size:1rem;font-weight:700;color:#0f1e3d;margin-bottom:8px;">Suntec City Tower — Security Overhaul</h3>
+          <p style="font-size:.85rem;color:#6b7280;line-height:1.6;margin-bottom:16px;">120 IP cameras, 8-floor access control, CCTV + BMS integration. Completed in 6 weeks with zero downtime to tenants.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">120 Cameras</span>
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">8 Floors</span>
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">BMS Integration</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="network">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#0f2a1e,#1a4a30);">
+          <span class="project-badge">Network + Cabling</span>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;"><span style="font-size:3.5rem;">🏭</span></div>
+        </div>
+        <div style="padding:24px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;"><span style="font-size:.75rem;background:#f3f4f6;color:#374151;padding:3px 10px;border-radius:100px;font-weight:500;">Industrial</span><span style="font-size:.75rem;color:#9ca3af;">· 2023</span></div>
+          <h3 style="font-size:1rem;font-weight:700;color:#0f1e3d;margin-bottom:8px;">Jurong Industrial Campus — Network Infrastructure</h3>
+          <p style="font-size:.85rem;color:#6b7280;line-height:1.6;margin-bottom:16px;">10Gbps fibre backbone, 200+ network points, Wi-Fi 6 for 500+ users across 4 buildings. Reduced network downtime by 90%.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">4 Buildings</span>
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">Wi-Fi 6</span>
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">10Gbps Core</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="smart government">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#1a1030,#2e1a50);">
+          <span class="project-badge">Smart Building</span>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;"><span style="font-size:3.5rem;">🏫</span></div>
+        </div>
+        <div style="padding:24px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;"><span style="font-size:.75rem;background:#f3f4f6;color:#374151;padding:3px 10px;border-radius:100px;font-weight:500;">Government / Education</span><span style="font-size:.75rem;color:#9ca3af;">· 2022</span></div>
+          <h3 style="font-size:1rem;font-weight:700;color:#0f1e3d;margin-bottom:8px;">MOE Primary School — Smart Campus Deployment</h3>
+          <p style="font-size:.85rem;color:#6b7280;line-height:1.6;margin-bottom:16px;">CCTV, access control, Wi-Fi, intercom, digital signage, and IoT sensors unified under a single management platform.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">Unified Platform</span>
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">IoT Sensors</span>
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">GeBIZ</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="cctv">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#1e0e0a,#3a1a14);">
+          <span class="project-badge">Retail Security</span>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;"><span style="font-size:3.5rem;">🛍️</span></div>
+        </div>
+        <div style="padding:24px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;"><span style="font-size:.75rem;background:#f3f4f6;color:#374151;padding:3px 10px;border-radius:100px;font-weight:500;">Retail</span><span style="font-size:.75rem;color:#9ca3af;">· 2024</span></div>
+          <h3 style="font-size:1rem;font-weight:700;color:#0f1e3d;margin-bottom:8px;">Ion Orchard Tenant — Anti-Theft Upgrade</h3>
+          <p style="font-size:.85rem;color:#6b7280;line-height:1.6;margin-bottom:16px;">AI-powered CCTV with behaviour analytics and POS integration. Reduced shoplifting incidents by 65% in first 3 months.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">AI Analytics</span>
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">POS Link</span>
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">-65% Theft</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="cctv network">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#0e1e30,#162840);">
+          <span class="project-badge">CCTV + Network</span>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;"><span style="font-size:3.5rem;">🏘️</span></div>
+        </div>
+        <div style="padding:24px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;"><span style="font-size:.75rem;background:#f3f4f6;color:#374151;padding:3px 10px;border-radius:100px;font-weight:500;">Residential</span><span style="font-size:.75rem;color:#9ca3af;">· 2023</span></div>
+          <h3 style="font-size:1rem;font-weight:700;color:#0f1e3d;margin-bottom:8px;">The Reef at King's Dock — Estate Security</h3>
+          <p style="font-size:.85rem;color:#6b7280;line-height:1.6;margin-bottom:16px;">850-unit condo: carpark CCTV, perimeter cameras, visitor management system, and guard post network infrastructure.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">850 Units</span>
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">Visitor Mgmt</span>
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">Full Coverage</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="government smart">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#0a1a2e,#162840);">
+          <span class="project-badge">Government Project</span>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;"><span style="font-size:3.5rem;">🏛️</span></div>
+        </div>
+        <div style="padding:24px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;"><span style="font-size:.75rem;background:#f3f4f6;color:#374151;padding:3px 10px;border-radius:100px;font-weight:500;">Government</span><span style="font-size:.75rem;color:#9ca3af;">· 2022</span></div>
+          <h3 style="font-size:1rem;font-weight:700;color:#0f1e3d;margin-bottom:8px;">HDB Town Council — Estate-Wide CCTV Refresh</h3>
+          <p style="font-size:.85rem;color:#6b7280;line-height:1.6;margin-bottom:16px;">Replaced 300+ analogue cameras with HD IP cameras across a 12-block HDB estate, via GeBIZ procurement. 8-week project completed on schedule.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">300+ Cameras</span>
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">12 Blocks</span>
+            <span style="font-size:.72rem;background:#fdf8e8;color:#9a7a20;padding:3px 9px;border-radius:100px;font-weight:600;">GeBIZ</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:48px;padding-top:48px;border-top:1px solid #e5e7eb;" class="reveal">
+      <p style="font-size:.95rem;color:#6b7280;margin-bottom:24px;">These are just a sample of our 3,500+ regional deployments. Contact us to discuss your specific requirements.</p>
+      <a href="contact.html" class="btn-gold">Start Your Project →</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+<script>
+function filterProjects(cat) {
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.style.background = '#fff'; b.style.color = '#374151'; b.style.borderColor = '#e5e7eb';
+  });
+  event.target.style.background = '#0f1e3d'; event.target.style.color = '#fff'; event.target.style.borderColor = '#0f1e3d';
+  document.querySelectorAll('.project-card').forEach(card => {
+    const cats = card.dataset.cat || '';
+    card.style.display = (cat === 'all' || cats.includes(cat)) ? 'block' : 'none';
+  });
+}
+</script>
+</body>
+</html>

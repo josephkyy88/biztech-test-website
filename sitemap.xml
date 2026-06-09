@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core pages -->
+  <url><loc>https://www.biztechgroup.sg/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.biztechgroup.sg/about.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.biztechgroup.sg/solutions.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.biztechgroup.sg/industries.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.biztechgroup.sg/case-studies.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.biztechgroup.sg/apac.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.biztechgroup.sg/why-choose-us.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.biztechgroup.sg/portfolio.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.biztechgroup.sg/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.biztechgroup.sg/careers.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.biztechgroup.sg/partner-with-biztech.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.biztechgroup.sg/contact.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- SEO Landing Pages (Phase 1) -->
+  <url><loc>https://www.biztechgroup.sg/cctv-installation-singapore.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://www.biztechgroup.sg/access-control-singapore.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://www.biztechgroup.sg/structured-cabling-singapore.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://www.biztechgroup.sg/digital-signage-singapore.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://www.biztechgroup.sg/business-phone-system-singapore.html</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+
+  <!-- Authority Articles (Phase 2) -->
+  <url><loc>https://www.biztechgroup.sg/blog-mha-cctv-requirements.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.biztechgroup.sg/blog-cctv-maintenance-contracts.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.biztechgroup.sg/blog-security-as-a-service-vs-capex.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.biztechgroup.sg/blog-apac-technology-rollouts.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.biztechgroup.sg/blog-digital-signage-retail.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Case Studies (Phase 3) -->
+  <url><loc>https://www.biztechgroup.sg/case-study-logistics-cctv-apac.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.biztechgroup.sg/case-study-manufacturing-access-control.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.biztechgroup.sg/case-study-retail-digital-signage.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.biztechgroup.sg/case-study-commercial-office-structured-cabling.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.biztechgroup.sg/case-study-hospitality-smart-building.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- AI Search Optimization (Phase 4) -->
+  <url><loc>https://www.biztechgroup.sg/ai-search-optimization.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Legal & Compliance -->
+  <url><loc>https://www.biztechgroup.sg/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://www.biztechgroup.sg/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+</urlset>
