@@ -500,10 +500,224 @@ body {
 /* ─── Container ─── */
 .container { width: min(1180px, 100%); margin-inline: auto; padding-inline: 28px; }
 
-/* ─── Responsive ─── */
+/* ════════════════════════════════════════════════════
+   MOBILE QA — Global fixes (390px · 430px · 768px)
+   All rules scoped inside media queries.
+   Desktop layout is entirely unchanged.
+════════════════════════════════════════════════════ */
+
+/* Prevent horizontal overflow site-wide */
+html { overflow-x: hidden; }
+body { overflow-x: hidden; }
+img  { max-width: 100%; height: auto; }
+
+/* ─── 768px and below (tablet + mobile) ─── */
 @media (max-width: 768px) {
-  .section    { padding: 72px 0; }
-  .section-sm { padding: 52px 0; }
-  .hero-grid  { grid-template-columns: 1fr !important; }
-  .hero-visual-wrap { display: none; }
+
+  /* Container padding */
+  .container { padding-inline: 20px; }
+
+  /* Section vertical rhythm */
+  .section    { padding: 64px 0; }
+  .section-sm { padding: 48px 0; }
+
+  /* Page inner-hero */
+  .page-hero  { padding: 72px 0 48px; }
+
+  /* Dark section containers that use padding:96px 24px inline */
+  [style*="padding:96px 24px"] {
+    padding-top:    64px !important;
+    padding-bottom: 64px !important;
+  }
+
+  /* Hero container (index.html uses padding-top/bottom separately) */
+  [style*="padding-top:96px;padding-bottom:96px"] {
+    padding-top:    56px !important;
+    padding-bottom: 60px !important;
+  }
+
+  /* ── Hero two-column grid ── */
+  .hero-grid        { grid-template-columns: 1fr !important; }
+  .hero-visual-wrap { display: none !important; }
+
+  /* ── Large layout 2-col splits (text + visual) → single column ── */
+  [style*="grid-template-columns:1fr 1fr;gap:72px"],
+  [style*="grid-template-columns:1fr 1fr;gap:64px"],
+  [style*="grid-template-columns:1fr 1fr;gap:80px"],
+  [style*="grid-template-columns:1fr 1fr;gap:48px"],
+  [style*="grid-template-columns:1fr 1fr;gap:32px"],
+  [style*="grid-template-columns:1fr 1fr;gap:28px"] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* ── Case study primary card (no gap, starts with border-radius) ── */
+  [style*="grid-template-columns:1fr 1fr;border-radius:20px"],
+  [style*="grid-template-columns:1fr 1fr;min-height:420px"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Blog featured post (spans full grid col, inner 2-col) ── */
+  [style*="grid-column:1/-1;display:grid"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── FAQ section (1fr 1.3fr split) ── */
+  [style*="grid-template-columns:1fr 1.3fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* ── About page timeline (1fr 40px 1fr) ── */
+  [style*="grid-template-columns:1fr 40px 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  /* Hide the centre dot column and empty placeholder cells */
+  [style*="grid-template-columns:1fr 40px 1fr"] > div:nth-child(2) { display: none !important; }
+  [style*="grid-template-columns:1fr 40px 1fr"] > div:empty        { display: none !important; }
+  /* Left-align right-aligned timeline cells when stacked */
+  [style*="grid-template-columns:1fr 40px 1fr"] > div[style*="text-align:right"] {
+    text-align: left !important;
+  }
+
+  /* ── Form field rows (first/last name, partner form pairs) ── */
+  .form-row,
+  .field-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Blog/case study comparison tables → scroll ── */
+  [style*="grid-template-columns:2fr 1fr 1fr"] {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    min-width: 0;
+  }
+
+  /* ── 4-col metric rows → 2-col ── */
+  [style*="grid-template-columns:1fr 1fr 1fr 1fr;gap:12px"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* ── APAC country 3-col grids → 2-col ── */
+  [style*="grid-template-columns:1fr 1fr 1fr;gap:10px"],
+  [style*="grid-template-columns:1fr 1fr 1fr;gap:12px"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* ── 3-col case study metric stats → 2-col ── */
+  [style*="grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:16px"],
+  [style*="grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:32px"],
+  [style*="grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:32px"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* ── Contact form card: reduce inner padding on mobile ── */
+  [style*="padding:44px;box-shadow"] {
+    padding: 24px 20px !important;
+  }
+
+  /* ── Solutions top-feature card: reduce padding ── */
+  [style*="padding:40px 48px;display:grid"] {
+    padding: 24px 20px !important;
+  }
+
+  /* ── Primary case study right-panel padding ── */
+  [style*="padding:40px;background:#fff;display:flex;flex-direction:column;justify-content:center"] {
+    padding: 24px !important;
+  }
+
+  /* ── Secondary case study card body padding ── */
+  [style*="padding:28px 28px 32px;flex:1"] {
+    padding: 20px !important;
+  }
+
+  /* ── Tech partner logo grid: tighter tiles ── */
+  .tech-tile    { padding: 24px 16px; }
+  .tech-tile img { max-height: 36px; max-width: 120px; }
+
+  /* ── Insight / knowledge card body ── */
+  .insight-card-body { padding: 22px 20px 24px; }
+
+  /* ── Service card padding ── */
+  .service-card { padding: 28px 24px; }
+
+  /* ── Industry card padding ── */
+  .industry-card { padding: 20px 22px; }
+
+}
+
+/* ─── 480px and below (all phones) ─── */
+@media (max-width: 480px) {
+
+  /* Even tighter container on small phones */
+  .container { padding-inline: 16px; }
+
+  /* Trust bar items: remove vertical separators when they wrap */
+  [style*="border-right:1px solid #e5e7eb;text-align:center"] {
+    border-right: none !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    padding: 14px 0 !important;
+    width: 100%;
+  }
+
+  /* Hero heading: clamp to smaller floor on tiny screens */
+  .hero-grid h1 {
+    font-size: clamp(1.75rem, 7vw, 2.4rem) !important;
+    line-height: 1.1 !important;
+  }
+
+  /* Hero announcement badge: prevent overflow */
+  .hero-grid [style*="font-size:.76rem"] {
+    font-size: .68rem !important;
+    letter-spacing: .08em !important;
+    white-space: normal !important;
+  }
+
+  /* Blog featured post: tighter inner padding */
+  [style*="padding:40px;display:flex;flex-direction:column;justify-content:space-between"],
+  [style*="padding:40px;display:flex;flex-direction:column;justify-content:center"] {
+    padding: 22px !important;
+  }
+
+  /* Right-panel "In This Article" section in blog featured */
+  [style*="padding:40px;display:flex;flex-direction:column;justify-content:center"] {
+    padding: 22px !important;
+  }
+
+  /* Case study card metric grids: 3-col → 1-col on very small screens */
+  [style*="grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:16px"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Partner & contact: 3-col stat bars */
+  [style*="grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:32px"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Managed services 2×2 stat tiles: keep 2-col (compact enough) */
+
+  /* FAQ buttons: full-width stacked */
+  .faq-trigger { padding: 18px 20px; font-size: .9rem; }
+
+  /* Section title: smaller floor */
+  .section-title { font-size: clamp(1.5rem, 5.5vw, 2rem) !important; }
+
+  /* Section subtitle: tighter */
+  .section-sub { font-size: .95rem; }
+
+  /* Prop card content padding */
+  .prop-card [style*="padding:28px 32px 36px"] { padding: 22px 20px 28px !important; }
+
+  /* Page hero tighter */
+  .page-hero { padding: 60px 0 36px; }
+
+  /* Why Biztech 2×3 grid reasons: already auto-fit, fine */
+
+  /* Footer bottom bar: stack copyright + links */
+  [style*="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px"] {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
 }
