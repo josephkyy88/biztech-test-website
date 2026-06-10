@@ -249,7 +249,7 @@ function injectComponents() {
     const desktopNav = document.querySelector('.nav-desktop');
     const ctasEl = document.querySelector('.nav-ctas');
     if (!ham) return;
-    if (window.innerWidth < 1180) {
+    if (window.innerWidth < 1200) {
       ham.style.display = 'block';
       if (desktopNav) desktopNav.style.display = 'none';
       if (ctasEl) ctasEl.style.display = 'none';
