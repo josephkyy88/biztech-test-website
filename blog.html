@@ -258,7 +258,7 @@
         <p style="font-size:.85rem;color:#6b7280;margin-bottom:24px;line-height:1.7;">Monthly roundup of our latest articles, white papers, and APAC technology market updates — no spam, unsubscribe anytime.</p>
         <form id="newsletter-form" onsubmit="handleNewsletterSubmit(event)" style="display:flex;flex-direction:column;gap:12px;">
           <!-- Web3Forms config: visit web3forms.com, enter support@biztechgroup.com.sg, replace key below -->
-          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+          <input type="hidden" name="access_key" value="2240b328-7ad1-4d0e-9b99-d6a84ccffb91" />
           <input type="hidden" name="subject" value="New Knowledge Centre Subscription – Biztech Group" />
           <input type="hidden" name="from_name" value="Biztech Group Website" />
           <!-- Honeypot anti-spam: must stay hidden and empty -->
@@ -329,6 +329,8 @@ function handleNewsletterSubmit(e) {
     interest: form.querySelector('[name="interest"]').value,
     source_url: window.location.href
   };
+  var botEl = form.querySelector('[name="botcheck"]');
+  if (botEl && botEl.checked) { payload.botcheck = 'on'; }
 
   fetch('https://api.web3forms.com/submit', {
     method: 'POST',
