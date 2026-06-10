@@ -819,3 +819,22 @@ img  { max-width: 100%; height: auto; }
 #nav-hamburger:active {
   opacity: .72;
 }
+
+/* ─── Desktop: APAC country flag visibility ─── */
+/* On desktop (≥769px) the hero right panel and APAC Presence section
+   flags must be unconditionally visible. The hero-visual-wrap is shown
+   by default (only hidden at ≤768px via the mobile block above), but the
+   explicit rule below closes any edge-case. The APAC section's .reveal
+   columns start at opacity:0 and rely on IntersectionObserver — which can
+   silently miss on wider viewports. Forcing opacity:1 on desktop ensures
+   the flag grid is always rendered regardless of scroll or IO timing. */
+@media (min-width: 769px) {
+  /* Hero right column: definitively displayed */
+  .hero-visual-wrap { display: block !important; }
+
+  /* APAC Presence section: flag grid and text always visible on desktop */
+  [style*="grid-template-columns:1fr 1fr;gap:64px;align-items:center"] > .reveal {
+    opacity:   1 !important;
+    transform: none !important;
+  }
+}
