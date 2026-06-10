@@ -443,13 +443,6 @@ body {
 }
 @media (max-width: 700px) {
   .tech-grid { grid-template-columns: repeat(2,1fr); }
-  /* Hikvision: ~17.5% larger bounding box on mobile 2-col view only */
-  .tech-tile-hikvision img {
-    height:     47px  !important;
-    width:      153px !important;
-    max-height: 47px  !important;
-    max-width:  153px !important;
-  }
 }
 .tech-tile {
   background: #fff; padding: 36px 28px;
@@ -464,7 +457,7 @@ body {
   transform: translateY(-3px);
 }
 .tech-tile img {
-  max-height: 44px; max-width: 140px; width: auto; height: auto;
+  max-height: 36px; max-width: 96px; width: auto; height: auto;
   object-fit: contain; display: block;
 }
 
@@ -649,13 +642,15 @@ img  { max-width: 100%; height: auto; }
     align-items: center;
     justify-content: center;
   }
-  /* Fixed bounding box for all logos — gives every image the same 130×40 element,
-     eliminating left/right column height discrepancy caused by varying logo aspect ratios */
+  /* Uniform 88×28 bounding box — all logos same element size, object-fit:contain scales
+     each logo within it. Keeps left/right column flush; prevents wide wordmarks from
+     dominating. 32% width reduction from previous 130px makes AWS/Cisco/Samsung balanced
+     with compact badge logos like Hikvision. */
   .tech-tile img {
-    height:      40px  !important;
-    width:       130px !important;
-    max-height:  40px  !important;
-    max-width:   130px !important;
+    height:      28px  !important;
+    width:       88px  !important;
+    max-height:  28px  !important;
+    max-width:   88px  !important;
     object-fit:  contain !important;
     display:     block !important;
   }
@@ -782,20 +777,19 @@ img  { max-width: 100%; height: auto; }
   }
 }
 
-/* ─── Logo size — mobile only (767px and below) ─── */
-/* Reduces nav + footer Biztech logo ~14% (28px → 24px).
-   Uses !important to override the inline height on injected HTML.
-   Desktop and tablet (768px+) are entirely unchanged. */
+/* ─── Logo size overrides ─── */
+/* Nav: 28px desktop → 24px mobile (unchanged).
+   Footer: 28px → 26px desktop (inline), 26px → 22px mobile (below). */
 @media (max-width: 767px) {
-  /* Nav bar logo */
+  /* Nav bar logo — unchanged from previous session */
   #main-nav a img {
     height: 24px !important;
     width: auto !important;
   }
 
-  /* Footer logo */
+  /* Footer logo — reduced further: 24px → 22px (~8% reduction on mobile) */
   footer img[alt="Biztech Group"] {
-    height: 24px !important;
+    height: 22px !important;
     width: auto !important;
   }
 }
