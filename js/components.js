@@ -70,31 +70,33 @@ const NAV_HTML = `
       </div>
 
       <!-- Hamburger -->
-      <button id="nav-hamburger" onclick="toggleMobileMenu()" style="display:none;background:none;border:1px solid #e5e7eb;border-radius:8px;padding:8px;cursor:pointer;color:#374151;" aria-label="Toggle menu">
-        <svg id="ham-icon" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        <svg id="close-icon" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display:none;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      <button id="nav-hamburger" onclick="toggleMobileMenu()" style="display:none;background:#0f1e3d;border:none;border-radius:8px;padding:9px 10px;cursor:pointer;color:#fff;flex-shrink:0;line-height:0;transition:opacity .15s;" aria-label="Toggle navigation menu">
+        <svg id="ham-icon" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="close-icon" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="display:none;"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
     </div>
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" style="display:none;border-top:1px solid #e5e7eb;background:#fff;padding:16px 24px 24px;max-height:80vh;overflow-y:auto;">
-    <a href="index.html" style="display:block;padding:12px 0;font-weight:500;color:#374151;text-decoration:none;border-bottom:1px solid #f3f4f6;">Home</a>
-    <a href="about.html" style="display:block;padding:12px 0;font-weight:500;color:#374151;text-decoration:none;border-bottom:1px solid #f3f4f6;">About Us</a>
-    <a href="solutions.html" style="display:block;padding:12px 0;font-weight:500;color:#374151;text-decoration:none;border-bottom:1px solid #f3f4f6;">Solutions</a>
-    <a href="industries.html" style="display:block;padding:12px 0;font-weight:500;color:#374151;text-decoration:none;border-bottom:1px solid #f3f4f6;">Industries</a>
-    <a href="case-studies.html" style="display:block;padding:12px 0;font-weight:500;color:#374151;text-decoration:none;border-bottom:1px solid #f3f4f6;">Case Studies</a>
-    <a href="apac.html" style="display:block;padding:12px 0;font-weight:500;color:#374151;text-decoration:none;border-bottom:1px solid #f3f4f6;">APAC Presence</a>
-    <a href="why-choose-us.html" style="display:block;padding:12px 0;font-weight:500;color:#374151;text-decoration:none;border-bottom:1px solid #f3f4f6;">Why Biztech</a>
-    <a href="careers.html" style="display:block;padding:12px 0;font-weight:500;color:#374151;text-decoration:none;border-bottom:1px solid #f3f4f6;">Careers</a>
-    <a href="blog.html" style="display:block;padding:12px 0;font-weight:500;color:#374151;text-decoration:none;border-bottom:1px solid #f3f4f6;">Insights &amp; Blog</a>
-    <a href="contact.html" style="display:block;padding:12px 0;font-weight:500;color:#374151;text-decoration:none;border-bottom:1px solid #f3f4f6;">Contact Us</a>
-    <div style="padding-top:16px;display:flex;flex-direction:column;gap:10px;">
-      <a href="tel:+6567588817" style="display:flex;align-items:center;gap:8px;font-weight:600;color:#0f1e3d;text-decoration:none;">
-        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+  <!-- Mobile Menu — premium dark panel -->
+  <div id="mobile-menu" style="display:none;background:linear-gradient(180deg,#0f1e3d 0%,#071120 100%);border-top:2px solid rgba(201,168,76,0.45);box-shadow:0 16px 48px rgba(0,0,0,.35);max-height:calc(100vh - 76px);overflow-y:auto;">
+    <div>
+      <a href="index.html" class="mobile-nav-link" style="display:flex;align-items:center;justify-content:space-between;padding:14px 24px;font-size:.9rem;font-weight:500;color:rgba(255,255,255,.82);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06);letter-spacing:.01em;">Home<svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="opacity:.28;flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+      <a href="about.html" class="mobile-nav-link" style="display:flex;align-items:center;justify-content:space-between;padding:14px 24px;font-size:.9rem;font-weight:500;color:rgba(255,255,255,.82);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06);letter-spacing:.01em;">About Us<svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="opacity:.28;flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+      <a href="solutions.html" class="mobile-nav-link" style="display:flex;align-items:center;justify-content:space-between;padding:14px 24px;font-size:.9rem;font-weight:500;color:rgba(255,255,255,.82);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06);letter-spacing:.01em;">Solutions<svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="opacity:.28;flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+      <a href="industries.html" class="mobile-nav-link" style="display:flex;align-items:center;justify-content:space-between;padding:14px 24px;font-size:.9rem;font-weight:500;color:rgba(255,255,255,.82);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06);letter-spacing:.01em;">Industries<svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="opacity:.28;flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+      <a href="case-studies.html" class="mobile-nav-link" style="display:flex;align-items:center;justify-content:space-between;padding:14px 24px;font-size:.9rem;font-weight:500;color:rgba(255,255,255,.82);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06);letter-spacing:.01em;">Case Studies<svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="opacity:.28;flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+      <a href="apac.html" class="mobile-nav-link" style="display:flex;align-items:center;justify-content:space-between;padding:14px 24px;font-size:.9rem;font-weight:500;color:rgba(255,255,255,.82);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06);letter-spacing:.01em;">APAC Presence<svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="opacity:.28;flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+      <a href="why-choose-us.html" class="mobile-nav-link" style="display:flex;align-items:center;justify-content:space-between;padding:14px 24px;font-size:.9rem;font-weight:500;color:rgba(255,255,255,.82);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06);letter-spacing:.01em;">Why Biztech<svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="opacity:.28;flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+      <a href="careers.html" class="mobile-nav-link" style="display:flex;align-items:center;justify-content:space-between;padding:14px 24px;font-size:.9rem;font-weight:500;color:rgba(255,255,255,.82);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06);letter-spacing:.01em;">Careers<svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="opacity:.28;flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+      <a href="blog.html" class="mobile-nav-link" style="display:flex;align-items:center;justify-content:space-between;padding:14px 24px;font-size:.9rem;font-weight:500;color:rgba(255,255,255,.82);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.06);letter-spacing:.01em;">Insights &amp; Blog<svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="opacity:.28;flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+      <a href="contact.html" class="mobile-nav-link" style="display:flex;align-items:center;justify-content:space-between;padding:14px 24px;font-size:.9rem;font-weight:500;color:rgba(255,255,255,.82);text-decoration:none;letter-spacing:.01em;">Contact Us<svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="opacity:.28;flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></a>
+    </div>
+    <div style="padding:20px 24px 28px;border-top:1px solid rgba(255,255,255,.07);">
+      <a href="tel:+6567588817" style="display:flex;align-items:center;gap:10px;font-size:.88rem;font-weight:600;color:rgba(255,255,255,.55);text-decoration:none;margin-bottom:14px;">
+        <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
         +65 6758 8817
       </a>
-      <a href="contact.html" class="btn-gold" style="justify-content:center;text-align:center;">Get a Proposal →</a>
+      <a href="contact.html" class="btn-gold" style="display:block;text-align:center;justify-content:center;width:100%;">Get a Proposal →</a>
     </div>
   </div>
 </nav>
@@ -210,6 +212,21 @@ function injectComponents() {
   if (footerEl) footerEl.innerHTML = FOOTER_HTML;
   document.body.insertAdjacentHTML('beforeend', WA_FLOAT_HTML);
 
+  // Close mobile menu when any link inside it is tapped
+  const mobileMenuEl = document.getElementById('mobile-menu');
+  if (mobileMenuEl) {
+    mobileMenuEl.addEventListener('click', (e) => {
+      if (e.target.closest('a')) {
+        mobileMenuEl.style.display = 'none';
+        mobileMenuEl.classList.remove('nav-open');
+        const hi = document.getElementById('ham-icon');
+        const ci = document.getElementById('close-icon');
+        if (hi) hi.style.display = 'block';
+        if (ci) ci.style.display = 'none';
+      }
+    });
+  }
+
   // Scroll shadow on nav
   window.addEventListener('scroll', () => {
     const nav = document.getElementById('main-nav');
@@ -241,7 +258,7 @@ function injectComponents() {
       if (desktopNav) desktopNav.style.display = 'flex';
       if (ctasEl) ctasEl.style.display = 'flex';
       const menu = document.getElementById('mobile-menu');
-      if (menu) menu.style.display = 'none';
+      if (menu) { menu.style.display = 'none'; menu.classList.remove('nav-open'); }
     }
   };
   checkWidth();
@@ -254,7 +271,14 @@ function toggleMobileMenu() {
   const closeIcon = document.getElementById('close-icon');
   if (!menu) return;
   const isOpen = menu.style.display === 'block';
-  menu.style.display = isOpen ? 'none' : 'block';
+  if (isOpen) {
+    menu.style.display = 'none';
+    menu.classList.remove('nav-open');
+  } else {
+    menu.style.display = 'block';
+    menu.offsetHeight; // force reflow so animation starts fresh each open
+    menu.classList.add('nav-open');
+  }
   if (hamIcon) hamIcon.style.display = isOpen ? 'block' : 'none';
   if (closeIcon) closeIcon.style.display = isOpen ? 'none' : 'block';
 }
