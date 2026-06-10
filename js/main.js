@@ -28,15 +28,7 @@ function initReveal() {
 }
 
 // ─── Web3Forms — email delivery ───────────────────────────────────────────────
-//
-//  SETUP (one-time, ~2 minutes):
-//  1. Go to https://web3forms.com
-//  2. Enter:  support@biztechgroup.com.sg
-//  3. Click "Create Access Key" — Web3Forms emails your key instantly (check spam).
-//  4. Open contact.html and blog.html — find the hidden input named "access_key"
-//     and replace  YOUR_WEB3FORMS_ACCESS_KEY  with the key you received.
-//  Done. All form submissions will deliver to support@biztechgroup.com.sg.
-//
+// All forms submit to support@biztechgroup.com.sg via Web3Forms.
 const W3F_ENDPOINT = 'https://api.web3forms.com/submit';
 
 // Builds a JSON-serialisable payload from a form.
@@ -59,19 +51,10 @@ function submitForm(form, btn, successText) {
 
   const payload = buildPayload(form);
 
-  // Dev guard — warn clearly if key is still a placeholder
-  if (!payload.access_key || payload.access_key === 'YOUR_WEB3FORMS_ACCESS_KEY') {
-    console.warn(
-      '[Biztech] Web3Forms key not set.\n' +
-      '1. Visit https://web3forms.com\n' +
-      '2. Enter support@biztechgroup.com.sg\n' +
-      '3. Replace YOUR_WEB3FORMS_ACCESS_KEY in the hidden <input> inside every <form>.'
-    );
-    setTimeout(() => {
-      btn.textContent = successText + ' (dev only — key not set)';
-      btn.style.background = '#155c3d';
-      setTimeout(() => { btn.textContent = orig; btn.style.background = ''; btn.disabled = false; form.reset(); }, 4000);
-    }, 700);
+  if (!payload.access_key) {
+    console.error('[Biztech] Web3Forms access_key is missing from the form.');
+    btn.textContent = orig;
+    btn.disabled = false;
     return;
   }
 

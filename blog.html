@@ -310,13 +310,10 @@ function handleNewsletterSubmit(e) {
   btn.textContent = 'Sending…';
   btn.disabled = true;
 
-  if (!accessKey || accessKey === 'YOUR_WEB3FORMS_ACCESS_KEY') {
-    console.warn('[Biztech] Web3Forms key not set. Visit https://web3forms.com, enter support@biztechgroup.com.sg, and replace YOUR_WEB3FORMS_ACCESS_KEY in blog.html.');
-    setTimeout(function() {
-      btn.textContent = 'Subscribed! ✓ (dev — key not set)';
-      btn.style.background = '#22c55e';
-      setTimeout(function() { btn.textContent = orig; btn.style.background = ''; btn.disabled = false; form.reset(); }, 3500);
-    }, 700);
+  if (!accessKey) {
+    console.error('[Biztech] Web3Forms access_key is missing from the newsletter form.');
+    btn.textContent = orig;
+    btn.disabled = false;
     return;
   }
 
