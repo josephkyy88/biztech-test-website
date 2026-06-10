@@ -110,7 +110,7 @@ const FOOTER_HTML = `
 
       <!-- Brand -->
       <div>
-        <img src="brand_assets/BiztechGroup.png" alt="Biztech Group" style="height:28px;width:auto;display:block;margin-bottom:20px;filter:brightness(0) invert(1);opacity:.88;object-fit:contain;" />
+        <img src="brand_assets/BiztechGroup.png" alt="Biztech Group" style="height:26px;width:auto;display:block;margin-bottom:20px;filter:brightness(0) invert(1);opacity:.88;object-fit:contain;" />
         <p style="font-size:.88rem;line-height:1.75;color:rgba(255,255,255,.55);max-width:280px;margin-bottom:20px;">Asia Pacific's integrated technology infrastructure partner — designing, deploying and managing security, smart building, digital experience and connectivity solutions for enterprise organisations across APAC since 2015.</p>
         <div style="display:flex;gap:10px;">
           <a href="#" style="width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:8px;display:flex;align-items:center;justify-content:center;text-decoration:none;color:rgba(255,255,255,.6);font-size:.85rem;font-weight:700;transition:all .2s;" onmouseover="this.style.background='#c9a84c';this.style.color='#071120'" onmouseout="this.style.background='rgba(255,255,255,.08)';this.style.color='rgba(255,255,255,.6)'">in</a>
@@ -249,7 +249,7 @@ function injectComponents() {
     const desktopNav = document.querySelector('.nav-desktop');
     const ctasEl = document.querySelector('.nav-ctas');
     if (!ham) return;
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth < 1180) {
       ham.style.display = 'block';
       if (desktopNav) desktopNav.style.display = 'none';
       if (ctasEl) ctasEl.style.display = 'none';
